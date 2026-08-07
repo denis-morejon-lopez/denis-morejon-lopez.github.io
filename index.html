@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+<div class="catalog-container">
+    <img class="photo" src="images/denis_profile.png" alt="Photo" />
+    <h1>Projects completed</h1>
+    <div id="catalog">
+        <div class="toolbar">
+            <input class="search-box search" placeholder="🔍 Looking for projects..." />
+            <div class="counter">
+                Showing <span class="count">0</span> projects
+            </div>
+        </div>
+        <ul class="list">
+            <li>
+                <!-- Añadido data-full-description para el detalle ampliado -->
+                <img class="product-image" src="images/nginx_proxmox_controller.png" alt="Nginx Proxmox Controller" 
+                data-full-description="Detailed overview: This tool continuously monitors incoming HTTP requests via Nginx and dynamically starts/stops Proxmox LXC containers to conserve server resources." 
+                />
+                <span class="name"><b>Name</b>: Nginx Proxmox Controller</span>
+                <span class="category"><b>Category</b>: Virtualization</span>
+                <span class="description"><b>Description</b>: A bash based system to stop and start Proxmox VE container, depending on if they are accessed or not</span>
+            </li>
+            
+            <li>
+                <img class="product-image" src="images/k8s.png" alt="Installed kubernetes cluster" 
+                data-full-description="Detailed overview: Automated deployment using custom Bash and Ansible playbooks to set up a production-ready Kubernetes cluster across multiple nodes, including container runtime setup and CNI integration." />
+                <span class="name"><b>Name</b>: Installed kubernetes cluster</span>
+                <span class="category"><b>Category</b>: Container</span>
+                <span class="description"><b>Description</b>: We used two scripts to install a complete kubernetes cluster</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal / Popup -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <img id="modal-img" src="" alt="Project Image Preview" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+    </div>
+</div>
+
+<!-- Cargar librería list.js online -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+<script src="script.js" defer></script>
+
+</body>
+</html>
