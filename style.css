@@ -96,3 +96,63 @@
 .close-btn:hover {
     color: #0f172a;
 }
+
+
+/* Contenedor que envuelve JUSTO la tarjeta. 
+   El fondo gris se ajusta al tamaño del contenido (sin ocupar toda la pantalla) */
+.mi-proyecto-wrapper {
+    display: inline-flex;      /* Hace que el fondo gris mida JUSTO lo que mide la tarjeta + el padding */
+    justify-content: center;
+    background-color: #e9edf2; /* Fondo gris claro */
+    padding: 4px;              /* ¡Solo 4px de separación entre el borde gris y la tarjeta blanca! */
+    border-radius: 20px;       /* Bordes redondeados en el rectángulo gris */
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+    /* NOTA: Se ha eliminado el "min-height: 100vh" para que no sea gigante */
+}
+
+/* La tarjeta blanca */
+.mi-proyecto-wrapper .tarjeta-proyectos {
+    background-color: #ffffff;
+    padding: 4px 12px;         /* Padding mínimo: 4px arriba/abajo, 12px a los lados (unos 4mm) */
+    border-radius: 16px;       /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    border: 1px solid #f0f2f5;
+    transition: box-shadow 0.3s ease;
+    width: 100%;               /* Asegura que ocupe todo el espacio del wrapper */
+}
+
+/* Efecto sutil al pasar el ratón */
+.mi-proyecto-wrapper .tarjeta-proyectos:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Título principal */
+.mi-proyecto-wrapper .tarjeta-proyectos h1 {
+    font-size: 4rem;           /* El texto sigue siendo grande */
+    font-weight: 600;
+    color: #1e2a3a;
+    letter-spacing: 2px;
+    margin: 0;                 /* Sin márgenes externos para que no se separe */
+    line-height: 1.2;
+}
+
+/* Línea decorativa gris */
+.mi-proyecto-wrapper .tarjeta-proyectos .barra-decorativa {
+    width: 60px;               /* Un poco más pequeña para que no sobresalga */
+    height: 3px;
+    background: #d0d7e0;
+    margin: 0.4rem auto 0;     /* Separación mínima con el título */
+    border-radius: 4px;
+}
+
+/* Subtítulo */
+.mi-proyecto-wrapper .tarjeta-proyectos .texto-secundario {
+    color: #8a95a5;
+    font-size: 0.75rem;        /* Más pequeño para que ocupe menos espacio */
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0.4rem;        /* Separación mínima con la línea */
+    margin-bottom: 0;
+}
