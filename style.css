@@ -97,39 +97,27 @@
     color: #0f172a;
 }
 
+/* Texto del título */
 
-/* Contenedor que ocupa toda la pantalla y centra su contenido */
-.centrador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;      /* Ancho total de la ventana */
-    height: 100vh;     /* Alto total de la ventana */
-    margin: 0;
-    padding: 0;
-    /* Fondo transparente para que se vea lo que hay detrás.
-       Si quieres que el fondo de la página sea azul claro, cámbialo aquí */
-    background-color: transparent;
+.mi-proyecto-wrapper {
+    display: inline-flex;
+    background-color: #c8d8e8;   
+    padding: 2px;                /* Separación entre el gris y el azul */
+    border-radius: 9999px;       /* Hace ovalado el contenedor exterior */
+    font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
 }
 
-/* Ajusta el wrapper para que herede el centrado */
-.centrador .mi-proyecto-wrapper {
-    /* Mantiene todo lo que ya tenías, solo se anida bajo .centrador */
+/* Tarjeta azul interior (la que tiene el texto) */
+.mi-proyecto-wrapper .tarjeta-proyectos {
+    /*background-color: #dce8f5;*/   
+    background-color: #f8fafc;
+    padding: 6px 20px;           /* Ajusta este valor: 6px arriba/abajo, 20px laterales (para que no quede muy apretado) */
+    border-radius: 9999px;       /* Hace ovalada la tarjeta interior */
+    text-align: center;
+    border: 1px solid #c0d4e8;   /* Borde azul claro */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: box-shadow 0.3s ease;
+    /* Sin width fijo, para que se ajuste al contenido */
 }
 
-/* La tarjeta ahora con fondo azul muy claro */
-.centrador .mi-proyecto-wrapper .tarjeta-proyectos {
-    background-color: #dce8f5; /* Azul muy claro (puedes cambiarlo) */
-    border-color: #c0d4e8;     /* Borde azul claro para que combine */
-    /* El resto de propiedades se mantienen igual */
-}
 
-/* Línea decorativa ajustada al azul */
-.centrador .mi-proyecto-wrapper .tarjeta-proyectos .barra-decorativa {
-    background: #b0c8dd; /* Azul grisáceo para contraste */
-}
-
-/* Subtítulo en tono azulado */
-.centrador .mi-proyecto-wrapper .tarjeta-proyectos .texto-secundario {
-    color: #5a6f82; /* Gris azulado */
-}
